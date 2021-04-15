@@ -54,7 +54,7 @@ def get_report(analytics):
                     'dateRanges': [{'startDate': '7daysAgo', 'endDate': 'today'}],
                     # 'metrics': [{'expression': 'ga:sessions'}],
                     # 'dimensions': [{'name': 'ga:country'}]
-                    'dimensions': [{'name': 'ga:interestOtherCategory'}]
+                    'dimensions': [{'name': 'ga:interestOtherCategory'}]    #ga:interestOtherCategory, ga:interestAffinityCategory, ga:interestInMarketCategory
                 }]
         }
     ).execute()
