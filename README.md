@@ -6,6 +6,11 @@ Automating to update the audience in Google Ads. The audiences are updated based
 
 `Benefit of this strategy`: `Lift the performance of advertising` in Google Ads. Have a higher `(1) number of clicks` and `(2) conversion rate` in the display ads.
 
+
+## System Overview
+[flow chart]
+
+
 ## The Strategy
 
 1. Analyze Audience reports in GA. Find top-n interests and demographic factors.

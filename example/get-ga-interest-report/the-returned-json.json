@@ -1,0 +1,1049 @@
+{"reports": [
+        {"columnHeader": {"dimensions": ["ga:interestOtherCategory"
+                ], "metricHeader": {"metricHeaderEntries": [
+                        {"name": "ga:visits", "type": "INTEGER"
+                        }
+                    ]
+                }
+            }, "data": {"rows": [
+                    {"dimensions": ["[Life Events] Business Creation/Recently Started a Business"
+                        ], "metrics": [
+                            {"values": ["149"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Business Creation/Starting a Business Soon"
+                        ], "metrics": [
+                            {"values": ["141"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] College Graduation/Graduating Soon"
+                        ], "metrics": [
+                            {"values": ["112"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] College Graduation/Recently Graduated"
+                        ], "metrics": [
+                            {"values": ["79"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Job Change/Recently Started New Job"
+                        ], "metrics": [
+                            {"values": ["517"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Job Change/Starting New Job Soon"
+                        ], "metrics": [
+                            {"values": ["485"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Marriage/Getting Married Soon"
+                        ], "metrics": [
+                            {"values": ["45"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Marriage/Recently Married"
+                        ], "metrics": [
+                            {"values": ["40"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Moving/Moving Soon"
+                        ], "metrics": [
+                            {"values": ["872"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Moving/Recently Moved"
+                        ], "metrics": [
+                            {"values": ["504"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Purchasing a Home/Purchasing a Home Soon"
+                        ], "metrics": [
+                            {"values": ["325"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["[Life Events] Purchasing a Home/Recently Purchased a Home"
+                        ], "metrics": [
+                            {"values": ["56"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Celebrities & Entertainment News"
+                        ], "metrics": [
+                            {"values": ["141"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Comics & Animation/Anime & Manga"
+                        ], "metrics": [
+                            {"values": ["23"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Events & Listings/Concerts & Music Festivals"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Fun & Trivia/Fun Tests & Silly Surveys"
+                        ], "metrics": [
+                            {"values": ["82"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Humor"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Movies/Bollywood & South Asian Film"
+                        ], "metrics": [
+                            {"values": ["152"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/Music Reference/Song Lyrics & Tabs"
+                        ], "metrics": [
+                            {"values": ["14"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/Music Streams & Downloads"
+                        ], "metrics": [
+                            {"values": ["20"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/Music Videos"
+                        ], "metrics": [
+                            {"values": ["31"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/Urban & Hip-Hop/Rap & Hip-Hop"
+                        ], "metrics": [
+                            {"values": ["24"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/World Music/African Music"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/World Music/Middle Eastern & North African Music"
+                        ], "metrics": [
+                            {"values": ["40"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Music & Audio/World Music/South Asian Music"
+                        ], "metrics": [
+                            {"values": ["105"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/Online Media/Online Image Galleries"
+                        ], "metrics": [
+                            {"values": ["29"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/TV & Video/Online Video"
+                        ], "metrics": [
+                            {"values": ["274"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/TV & Video/Online Video/Live Video Streaming"
+                        ], "metrics": [
+                            {"values": ["23"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/TV & Video/Online Video/Movie & TV Streaming"
+                        ], "metrics": [
+                            {"values": ["18"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/TV & Video/TV Networks & Stations"
+                        ], "metrics": [
+                            {"values": ["25"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Arts & Entertainment/TV & Video/TV Shows & Programs/TV Dramas"
+                        ], "metrics": [
+                            {"values": ["43"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Autos & Vehicles/Motor Vehicles (By Type)/Motorcycles"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Autos & Vehicles/Vehicle Codes & Driving Laws/Vehicle & Traffic Safety"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Autos & Vehicles/Vehicle Shopping/Used Vehicles"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Beauty & Fitness/Face & Body Care/Skin & Nail Care"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Beauty & Fitness/Fashion & Style"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Beauty & Fitness/Hair Care"
+                        ], "metrics": [
+                            {"values": ["34"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Books & Literature"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Books & Literature/Poetry"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Advertising & Marketing/Marketing"
+                        ], "metrics": [
+                            {"values": ["18"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Agriculture & Forestry/Agricultural Equipment"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Business Finance/Venture Capital"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Business Services/E-Commerce Services"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Chemicals Industry/Plastics & Polymers"
+                        ], "metrics": [
+                            {"values": ["21"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Construction & Maintenance/Building Materials & Supplies"
+                        ], "metrics": [
+                            {"values": ["20"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Energy & Utilities/Oil & Gas"
+                        ], "metrics": [
+                            {"values": ["15"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Industrial Materials & Equipment"
+                        ], "metrics": [
+                            {"values": ["70"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Industrial Materials & Equipment/Fluid Handling"
+                        ], "metrics": [
+                            {"values": ["21"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Industrial Materials & Equipment/Heavy Machinery"
+                        ], "metrics": [
+                            {"values": ["38"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Manufacturing"
+                        ], "metrics": [
+                            {"values": ["29"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Metals & Mining"
+                        ], "metrics": [
+                            {"values": ["23"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Metals & Mining/Precious Metals"
+                        ], "metrics": [
+                            {"values": ["14"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Small Business/MLM & Business Opportunities"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Business & Industrial/Textiles & Nonwovens"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Computer Security/Network Security"
+                        ], "metrics": [
+                            {"values": ["39"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Electronics & Electrical/Electrical Test & Measurement"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Electronics & Electrical/Electronic Components"
+                        ], "metrics": [
+                            {"values": ["47"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Networking/Networking Equipment"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Networking/VPN & Remote Access"
+                        ], "metrics": [
+                            {"values": ["37"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Business & Productivity Software"
+                        ], "metrics": [
+                            {"values": ["39"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Freeware & Shareware"
+                        ], "metrics": [
+                            {"values": ["25"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Internet Software/Proxying & Filtering"
+                        ], "metrics": [
+                            {"values": ["20"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Multimedia Software/Photo & Video Software/Photo Software"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Operating Systems/Mobile OS/Android OS"
+                        ], "metrics": [
+                            {"values": ["32"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Computers & Electronics/Software/Software Utilities"
+                        ], "metrics": [
+                            {"values": ["45"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Banking"
+                        ], "metrics": [
+                            {"values": ["20"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Investing"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Investing/Commodities & Futures Trading"
+                        ], "metrics": [
+                            {"values": ["14"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Investing/Currencies & Foreign Exchange"
+                        ], "metrics": [
+                            {"values": ["73"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Investing/Currencies & Foreign Exchange/Digital Currencies"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Finance/Investing/Funds/Mutual Funds"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Food & Drink/Cooking & Recipes"
+                        ], "metrics": [
+                            {"values": ["15"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Food & Drink/Cooking & Recipes/Cuisines/South Asian Cuisine/Indian Cuisine"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Board Games"
+                        ], "metrics": [
+                            {"values": ["11"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Card Games"
+                        ], "metrics": [
+                            {"values": ["11"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Action & Platform Games"
+                        ], "metrics": [
+                            {"values": ["38"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Adventure Games"
+                        ], "metrics": [
+                            {"values": ["11"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Browser Games"
+                        ], "metrics": [
+                            {"values": ["1249"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Casual Games"
+                        ], "metrics": [
+                            {"values": ["969"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Driving & Racing Games"
+                        ], "metrics": [
+                            {"values": ["69"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Massively Multiplayer Games"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Sandbox Games"
+                        ], "metrics": [
+                            {"values": ["36"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Computer & Video Games/Shooter Games"
+                        ], "metrics": [
+                            {"values": ["68"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Family-Oriented Games & Activities/Dress-Up & Fashion Games"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Games/Table Games/Billiards"
+                        ], "metrics": [
+                            {"values": ["60"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Hobbies & Leisure/Merit Prizes & Contests"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Hobbies & Leisure/Special Occasions/Holidays & Seasonal Events"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Home & Garden/Home & Interior Decor"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Home & Garden/Home Furnishings"
+                        ], "metrics": [
+                            {"values": ["11"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Email & Messaging/Text & Instant Messaging"
+                        ], "metrics": [
+                            {"values": ["100"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons"
+                        ], "metrics": [
+                            {"values": ["192"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons/Android Apps"
+                        ], "metrics": [
+                            {"values": ["102"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Mobile & Wireless/Mobile Apps & Add-Ons/Ringtones & Mobile Themes"
+                        ], "metrics": [
+                            {"values": ["15"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Mobile & Wireless/Mobile Phones/Smart Phones"
+                        ], "metrics": [
+                            {"values": ["111"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Search Engines"
+                        ], "metrics": [
+                            {"values": ["35"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Service Providers/Phone Service Providers"
+                        ], "metrics": [
+                            {"values": ["32"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Web Apps & Online Tools"
+                        ], "metrics": [
+                            {"values": ["22"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Web Services/Cloud Storage"
+                        ], "metrics": [
+                            {"values": ["26"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Web Services/Search Engine Optimization & Marketing"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Web Services/Web Design & Development"
+                        ], "metrics": [
+                            {"values": ["27"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Internet & Telecom/Web Services/Web Stats & Analytics"
+                        ], "metrics": [
+                            {"values": ["20"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Education/Colleges & Universities"
+                        ], "metrics": [
+                            {"values": ["100"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Education/Distance Learning"
+                        ], "metrics": [
+                            {"values": ["11"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Education/Primary & Secondary Schooling (K-12)"
+                        ], "metrics": [
+                            {"values": ["73"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Education/Private Tutoring Services"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Education/Standardized & Admissions Tests"
+                        ], "metrics": [
+                            {"values": ["69"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Jobs/Job Listings"
+                        ], "metrics": [
+                            {"values": ["38"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Jobs & Education/Jobs/Job Listings/Government & Public Sector Jobs"
+                        ], "metrics": [
+                            {"values": ["29"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Law & Government/Government/Royalty"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["News"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["News/Newspapers"
+                        ], "metrics": [
+                            {"values": ["44"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["News/Politics"
+                        ], "metrics": [
+                            {"values": ["66"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["News/Sports News"
+                        ], "metrics": [
+                            {"values": ["66"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["News/Weather"
+                        ], "metrics": [
+                            {"values": ["114"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Online Communities/Blogging Resources & Services"
+                        ], "metrics": [
+                            {"values": ["38"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Online Communities/Dating & Personals"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Online Communities/File Sharing & Hosting"
+                        ], "metrics": [
+                            {"values": ["50"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Online Communities/Social Networks"
+                        ], "metrics": [
+                            {"values": ["56"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["People & Society/Family & Relationships/Romance"
+                        ], "metrics": [
+                            {"values": ["25"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["People & Society/Social Issues & Advocacy/Green Living & Environmental Issues"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Pets & Animals/Animal Products & Services/Veterinarians"
+                        ], "metrics": [
+                            {"values": ["16"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Real Estate/Real Estate Listings/Residential Rentals"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/General Reference/Biographies & Quotations"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/General Reference/Dictionaries & Encyclopedias"
+                        ], "metrics": [
+                            {"values": ["49"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/General Reference/Educational Resources"
+                        ], "metrics": [
+                            {"values": ["15"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/General Reference/How-To, DIY & Expert Content"
+                        ], "metrics": [
+                            {"values": ["24"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/Geographic Reference/Maps"
+                        ], "metrics": [
+                            {"values": ["21"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/Language Resources/Foreign Language Resources/Foreign Language Study"
+                        ], "metrics": [
+                            {"values": ["40"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Reference/Language Resources/Foreign Language Resources/Translation Tools & Resources"
+                        ], "metrics": [
+                            {"values": ["22"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Science/Astronomy"
+                        ], "metrics": [
+                            {"values": ["10"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Science/Mathematics"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Science/Scientific Equipment"
+                        ], "metrics": [
+                            {"values": ["26"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Shopping/Apparel/Clothing Accessories/Gems & Jewelry"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Shopping/Apparel/Clothing Accessories/Handbags & Purses"
+                        ], "metrics": [
+                            {"values": ["13"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": [
+                            "Shopping/Apparel/Men's Clothing"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": [
+                            "Shopping/Apparel/Women's Clothing"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Shopping/Shopping Portals"
+                        ], "metrics": [
+                            {"values": ["19"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Sports/Combat Sports/Wrestling/Professional Wrestling/World Wrestling Entertainment (WWE)"
+                        ], "metrics": [
+                            {"values": ["15"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Sports/Sport Scores & Statistics"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Sports/Team Sports/Cricket"
+                        ], "metrics": [
+                            {"values": ["156"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Sports/Team Sports/Soccer"
+                        ], "metrics": [
+                            {"values": ["92"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Travel & Transportation/Hotels & Accommodations"
+                        ], "metrics": [
+                            {"values": ["59"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Travel & Transportation/Tourist Destinations/Beaches & Islands"
+                        ], "metrics": [
+                            {"values": ["12"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Travel & Transportation/Transportation/Air Travel"
+                        ], "metrics": [
+                            {"values": ["24"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Travel & Transportation/Transportation/Long Distance Bus & Rail"
+                        ], "metrics": [
+                            {"values": ["18"
+                                ]
+                            }
+                        ]
+                    },
+                    {"dimensions": ["Travel & Transportation/Travel Guides & Travelogues"
+                        ], "metrics": [
+                            {"values": ["17"
+                                ]
+                            }
+                        ]
+                    }
+                ], "totals": [
+                    {"values": ["10293"
+                        ]
+                    }
+                ], "rowCount": 146, "minimums": [
+                    {"values": ["10"
+                        ]
+                    }
+                ], "maximums": [
+                    {"values": ["1249"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
