@@ -42,7 +42,7 @@ GA_INTEREST_CATEGORIES = ['ga:interestOtherCategory',
                           'ga:interestAffinityCategory', 'ga:interestInMarketCategory']
 
 
-class getGAInterest():
+class getTop3GAInterest():
 
     def initialize_analyticsreporting(self):
         """Initializes an Analytics Reporting API V4 service object.
@@ -116,7 +116,9 @@ class getGAInterest():
 
             dicDimVal = dict(zip(dimList, valList))
             sortedList = self.sort_dict_by_value(dicDimVal)
-            top3Interests = sortedList[:3]
+            top3Interests = []
+            for item in sortedList[:3]:
+                top3Interests.append(item[0])
             # print('> top3Interests:', top3Interests)
 
         return categoryName, top3Interests
@@ -132,10 +134,6 @@ class getGAInterest():
         """
         # return sorted(dic.items(), key=lambda x: x[1])      #ascendingly
         return sorted(dic.items(), key=lambda x: -x[1])     # descendingly
-
-
-    def turple_to_dict(self, turple,):
-        
 
 
     def print_response(self, response):
@@ -166,7 +164,7 @@ class getGAInterest():
         #                 print(metricHeader.get('name') + ':', value)
 
 
-    def main(self):
+    def main(self) -> list:
         analytics = self.initialize_analyticsreporting()
 
         """The format,
@@ -174,11 +172,7 @@ class getGAInterest():
             allTop3 = [
                 {
                     'category': 'xxx1',
-                    'top3': [
-                        {'interest': 'xxx', 'visit': 'nnn'},
-                        {...},
-                        {...}
-                    ]
+                    'top3': ['interest': 'xxx1','interest': 'xxx2','interest': 'xxx3']
                 },
                 {...},
                 {...}
@@ -190,18 +184,19 @@ class getGAInterest():
             # ga:interestOtherCategory, ga:interestAffinityCategory, ga:interestInMarketCategory
             response = self.get_report(analytics, category)
             categoryName, top3InterestsPerCategory = self.get_top3_interest(response)
-            print('> categoryName:', categoryName)
-            print('> top3InterestsPerCategory:', top3InterestsPerCategory)
-            # for 
-            # allTop3.append({'
-            # top3InterestsPerCategory
-            # print_response(response)
+            # print('> categoryName:', categoryName)
+            # print('> top3InterestsPerCategory:', top3InterestsPerCategory)
 
-        print(allTop3)
+            allTop3.extend(top3InterestsPerCategory)
+
+        # print(allTop3)
 
         return allTop3
 
 
 if __name__ == '__main__':
     print('hi')
-    ga = getGAInterest().main()
+
+    # Get top 3 interests from Analytics Reporting API V4
+    top3Interests = getTop3GAInterest().main()
+    print(top3Interests)
