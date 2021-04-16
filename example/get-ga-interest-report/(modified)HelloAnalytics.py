@@ -14,7 +14,13 @@ from oauth2client.service_account import ServiceAccountCredentials
 import os
 import configparser
 config = configparser.ConfigParser()
-config.read(os.path.join(os.path.dirname(__file__), 'config.ini'))
+# config.read(os.path.join(os.path.dirname(__file__), 'config.ini'))    #old method
+current_dir =  os.path.abspath(os.path.dirname(__file__))   #can read .ini from parent folder
+parent_dir = os.path.abspath(current_dir + "/../../")       #
+file_path = os.path.join(parent_dir, 'config.ini')          #
+print(">",file_path)                                        #
+config.read(file_path)                                      #
+
 KEY_FILE_LOCATION = config['file_locations']['JSON_KEY_FILE_PATH']
 VIEW_ID = config['ga_settings']['VIEW_ID']
 
