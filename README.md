@@ -35,8 +35,11 @@ Update audience in Ad,
 
 ### Install the client library
 `python3 -m virtualenv venv` 
+
 `source venv/bin/activate` 
+
 `pip install --upgrade google-api-python-client` 
+
 `pip install --upgrade oauth2client`
 
 ## Contributing
