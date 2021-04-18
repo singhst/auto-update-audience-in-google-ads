@@ -1,5 +1,7 @@
 """Get top 3 audience's interests from Google Analytics through API.
 
+p.s. Can ONLY be executed locally, not ok in the Cloud Function.
+
 -----------------------------------
 
 This program is free software: you can redistribute it and/or modify it under
