@@ -24,22 +24,36 @@ https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/
 
 """
 
-
+import base64
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
+from google.cloud import storage
+
+from common import getCredential
 
 KEY_FILE_LOCATION = "././json_key_from_gcp.json"
 VIEW_ID = "234785120"
-
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
-# KEY_FILE_LOCATION = '<REPLACE_WITH_JSON_FILE>'
-# VIEW_ID = '<REPLACE_WITH_VIEW_ID>'
-
 GA_INTEREST_CATEGORIES = ['ga:interestOtherCategory',
                           'ga:interestAffinityCategory', 'ga:interestInMarketCategory']
 
+# find in Google Cloud Storage; upload the service account credential.json to GCS first
+GCS_BUCKET_NAME = 'cloud_func_auth_json'
+SERVICE_ACCOUNT_KEY_JSON = 'perceptive-ivy-293901-acf003f3426d.json'
 
-def initialize_analyticsreporting():
+
+def get_ga_service_cloudfunc():
+
+    credentials = getCredential.get_credential_cloudstorage(GCS_BUCKET_NAME, SERVICE_ACCOUNT_KEY_JSON)
+    print('credentials =', credentials)
+    
+    # Build the service object.
+    analytics = build('analyticsreporting', 'v4', credentials=credentials)
+
+    return analytics
+
+
+def get_ga_service_local():
     """Initializes an Analytics Reporting API V4 service object.
 
     Returns:
@@ -159,9 +173,7 @@ def print_response(response):
     #                 print(metricHeader.get('name') + ':', value)
 
 
-def main() -> list:
-    analytics = initialize_analyticsreporting()
-
+def main(analytics) -> list:
     """The format,
 
         allTop3 = [
@@ -189,9 +201,42 @@ def main() -> list:
     return allTop3
 
 
+def trigger_pubsub(event, context):
+    """Background Cloud Function to be triggered by Pub/Sub subscription.
+       This functions copies the triggering BQ table and copies it to an aggregate dataset.
+    Args:
+        event (dict): The Cloud Functions event payload.
+        context (google.cloud.functions.Context): Metadata of triggering event.
+    Returns:
+        None; the output is written to Stackdriver Logging
+    """
+    pubsub_message = base64.b64decode(event['data']).decode('utf-8')
+    print(pubsub_message)
+
+    # Get top 3 interests from Analytics Reporting API V4
+    analytics = get_ga_service_cloudfunc()
+    top3Interests = main(analytics = analytics)
+    print(top3Interests)
+
+
 if __name__ == '__main__':
     print('hi')
 
     # Get top 3 interests from Analytics Reporting API V4
-    top3Interests = main()
+    
+    ##get credential locally
+    print("=== Locally =========================")
+    analytics = get_ga_service_local()
+    top3Interests = main(analytics)
+    print(top3Interests)
+
+
+    ##get credential from Cloud Storage
+    print("=== From Cloud Storage =========================")
+    
+    ###Set env variable to let local environment get credential and enough permission to get authentication to GCS
+    getCredential.set_env_variable(KEY_FILE_LOCATION)
+
+    analytics = get_ga_service_cloudfunc()
+    top3Interests = main(analytics)
     print(top3Interests)

@@ -24,48 +24,22 @@ https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/
 
 """
 
-import base64
+
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
-from google.cloud import storage
 
-KEY_FILE_LOCATION = "././json_key_from_gcp.json"
+KEY_FILE_LOCATION = "./json_key_from_gcp.json"
 VIEW_ID = "234785120"
+
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
+# KEY_FILE_LOCATION = '<REPLACE_WITH_JSON_FILE>'
+# VIEW_ID = '<REPLACE_WITH_VIEW_ID>'
+
 GA_INTEREST_CATEGORIES = ['ga:interestOtherCategory',
                           'ga:interestAffinityCategory', 'ga:interestInMarketCategory']
 
-# find in Google Cloud Storage; upload the service account credential.json to GCS first
-GCS_BUCKET_NAME = 'cloud_func_auth_json'
-SERVICE_ACCOUNT_KEY_JSON = 'perceptive-ivy-293901-acf003f3426d.json'
 
-# save file to /tmp only as cloud functions only supports that to write to
-def download_gcs_file(obj, to, bucket):
-    client = storage.Client()
-    bucket = client.get_bucket(bucket)
-    blob = bucket.blob(obj)
-
-    blob.download_to_filename(to)
-    print('downloaded file {} to {}'.format(obj, to))
-
-
-def get_ga_service_cloudfunc(bucket:str):
-
-    download_gcs_file(SERVICE_ACCOUNT_KEY_JSON,
-                      f'/tmp/{SERVICE_ACCOUNT_KEY_JSON}', bucket)
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(
-        f'/tmp/{SERVICE_ACCOUNT_KEY_JSON}',
-        scopes=['https://www.googleapis.com/auth/analytics',
-                'https://www.googleapis.com/auth/analytics.edit'])
-    print('credentials =', credentials)
-    
-    # Build the service object.
-    analytics = build('analyticsreporting', 'v4', credentials=credentials)
-
-    return analytics
-
-
-def get_ga_service_local():
+def initialize_analyticsreporting():
     """Initializes an Analytics Reporting API V4 service object.
 
     Returns:
@@ -185,7 +159,9 @@ def print_response(response):
     #                 print(metricHeader.get('name') + ':', value)
 
 
-def main(analytics) -> list:
+def main() -> list:
+    analytics = initialize_analyticsreporting()
+
     """The format,
 
         allTop3 = [
@@ -213,28 +189,9 @@ def main(analytics) -> list:
     return allTop3
 
 
-def trigger_pubsub(event, context):
-    """Background Cloud Function to be triggered by Pub/Sub subscription.
-       This functions copies the triggering BQ table and copies it to an aggregate dataset.
-    Args:
-        event (dict): The Cloud Functions event payload.
-        context (google.cloud.functions.Context): Metadata of triggering event.
-    Returns:
-        None; the output is written to Stackdriver Logging
-    """
-    pubsub_message = base64.b64decode(event['data']).decode('utf-8')
-    print(pubsub_message)
-
-    # Get top 3 interests from Analytics Reporting API V4
-    analytics = get_ga_service_cloudfunc(GCS_BUCKET_NAME)
-    top3Interests = main(analytics = analytics)
-    print(top3Interests)
-
-
 if __name__ == '__main__':
     print('hi')
 
     # Get top 3 interests from Analytics Reporting API V4
-    analytics = get_ga_service_local()
-    top3Interests = main(analytics)
+    top3Interests = main()
     print(top3Interests)
