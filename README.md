@@ -31,7 +31,9 @@ Update audience in Ad,
 3. Find and enable relevant audiences (i.e. interests) in Ads. Pause the irrelevant audiences.
 4. Check the status of the Ad group. Enable it if it is pasued, otherwisw no action to Ad group.
 
-## Configuration on [xxx]
+## Configuration on Google Cloud Function
+
+Import the `in-cloud-function` folder into Cloud Function.
 
 ### Install the client library
 `python3 -m virtualenv venv` 
