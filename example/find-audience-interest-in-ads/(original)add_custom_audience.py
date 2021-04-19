@@ -1,3 +1,6 @@
+"""
+https://developers.google.com/google-ads/api/docs/remarketing/audience-types/custom-audiences#python
+"""
 #!/usr/bin/env python
 # Copyright 2020 Google LLC
 #
