@@ -1,5 +1,7 @@
 """Get top 3 audience's interests from Google Analytics through API.
 
+p.s. Can ONLY be executed locally, not ok in the Cloud Function.
+
 -----------------------------------
 
 This program is free software: you can redistribute it and/or modify it under
@@ -27,19 +29,9 @@ https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/
 
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
-import os
-import configparser
 
-config = configparser.ConfigParser()
-# config.read(os.path.join(os.path.dirname(__file__), 'config.ini'))
-current_dir =  os.path.abspath(os.path.dirname(__file__))   #can read .ini from parent folder
-parent_dir = os.path.abspath(current_dir + "/../../")       #
-file_path = os.path.join(parent_dir, 'config.ini')          #
-print(">",file_path)                                        #
-config.read(file_path)                                      #
-
-KEY_FILE_LOCATION = config['file_locations']['JSON_KEY_FILE_PATH']
-VIEW_ID = config['ga_settings']['VIEW_ID']
+KEY_FILE_LOCATION = "./json_key_from_gcp.json"
+VIEW_ID = "234785120"
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 # KEY_FILE_LOCATION = '<REPLACE_WITH_JSON_FILE>'
@@ -169,9 +161,10 @@ def print_response(response):
     #                 print(metricHeader.get('name') + ':', value)
 
 
-def main(analytics = initialize_analyticsreporting()) -> list:
+def main() -> list:
+    analytics = initialize_analyticsreporting()
 
-    """ `allTop3` format,
+    """The format,
 
         allTop3 = [
             {
@@ -199,9 +192,8 @@ def main(analytics = initialize_analyticsreporting()) -> list:
 
 
 if __name__ == '__main__':
-
     print('hi')
 
     # Get top 3 interests from Analytics Reporting API V4
-    top3Interests = main(analytics = initialize_analyticsreporting())
+    top3Interests = main()
     print(top3Interests)
