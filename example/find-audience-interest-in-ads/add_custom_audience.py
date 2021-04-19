@@ -46,7 +46,7 @@ def main(client, customer_id):
 
     # Create a custom audience
     custom_audience = custom_audience_operation.create
-    custom_audience.name = f"Example CustomAudience #{uuid4()}"
+    custom_audience.name = f'Example CustomAudience #{uuid4()}'
     custom_audience.description = (
         "Custom audiences who have searched specific terms on Google Search."
     )
@@ -95,7 +95,10 @@ def main(client, customer_id):
 if __name__ == "__main__":
     # GoogleAdsClient will read the google-ads.yaml configuration file in the
     # home directory if none is specified.
-    googleads_client = GoogleAdsClient.load_from_storage(version="v6")
+    # path = "google-ads.yaml"  
+    import os
+    path = os.path.join(os.path.dirname(__file__), 'google-ads.yaml')
+    googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
 
     parser = argparse.ArgumentParser(
         description="Adds a custom audience for a specified customer."
