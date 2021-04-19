@@ -33,7 +33,7 @@ from google.cloud import storage
 
 from common import getCredential
 
-KEY_FILE_LOCATION = "./json_key_from_gcp.json"
+KEY_FILE_LOCATION = "json_key_from_gcp.json"
 VIEW_ID = "234785120"
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 GA_INTEREST_CATEGORIES = ['ga:interestOtherCategory',
