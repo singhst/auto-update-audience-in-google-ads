@@ -1,5 +1,11 @@
 """
+
 https://developers.google.com/google-ads/api/docs/remarketing/audience-types/custom-audiences#python
+
+Quickstart,
+https://developers.google.com/google-ads/api/docs/first-call/overview
+Need a .ymal config file,
+https://developers.google.com/google-ads/api/docs/oauth/cloud-project
 """
 
 #!/usr/bin/env python
