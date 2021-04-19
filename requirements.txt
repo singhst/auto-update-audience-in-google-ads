@@ -32,10 +32,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.7.0
 pycparser==2.20
-<<<<<<< HEAD
-=======
 pylint==2.7.4
->>>>>>> d885020258d5929c9b7570ff3664bcaba0b165ac
 pyparsing==2.4.7
 pytz==2021.1
 PyYAML==5.4.1
