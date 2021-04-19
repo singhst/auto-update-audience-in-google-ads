@@ -29,6 +29,7 @@ from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 import os
 import configparser
+
 config = configparser.ConfigParser()
 # config.read(os.path.join(os.path.dirname(__file__), 'config.ini'))
 current_dir =  os.path.abspath(os.path.dirname(__file__))   #can read .ini from parent folder
@@ -46,7 +47,6 @@ SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 
 GA_INTEREST_CATEGORIES = ['ga:interestOtherCategory',
                           'ga:interestAffinityCategory', 'ga:interestInMarketCategory']
-
 
 
 def initialize_analyticsreporting():
@@ -169,10 +169,9 @@ def print_response(response):
     #                 print(metricHeader.get('name') + ':', value)
 
 
-def main() -> list:
-    analytics = initialize_analyticsreporting()
+def main(analytics = initialize_analyticsreporting()) -> list:
 
-    """The format,
+    """ `allTop3` format,
 
         allTop3 = [
             {
@@ -200,8 +199,9 @@ def main() -> list:
 
 
 if __name__ == '__main__':
+
     print('hi')
 
     # Get top 3 interests from Analytics Reporting API V4
-    top3Interests = main()
+    top3Interests = main(analytics = initialize_analyticsreporting())
     print(top3Interests)
