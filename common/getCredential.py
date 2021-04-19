@@ -59,7 +59,9 @@ if __name__ == '__main__':
     SERVICE_ACCOUNT_KEY_JSON = 'perceptive-ivy-293901-acf003f3426d.json'
 
     # Set env variable to let local environment get credential and enough permission to get authentication to GCS
+    KEY_FILE_LOCATION = "././perceptive-ivy-293901-acf003f3426d.json"
     set_env_variable(KEY_FILE_LOCATION)
+    print("> env parameters set")
 
     # Download the credential key from Cloud Storage
     credentials_cloudstorage = get_credential_cloudstorage(GCS_BUCKET_NAME, SERVICE_ACCOUNT_KEY_JSON)
