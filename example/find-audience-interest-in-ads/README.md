@@ -22,7 +22,25 @@ Can retrieve the developer token by signing in to your manager account then navi
 
 The OAuth2 client ID and client secret can be created in GCP 
 
-<img src="img\gcp-credential.jpg" style="zoom:50%;" />
+<img src="img\gcp-credential.jpg" style="zoom:50%;" /> 
+
+
+
+`client_secret credential.json`:
+
+Download from each `OAuth 2.0 client` name under GCP OAuth2.0.
+
+
+
+`refresh_token` and `access token`:
+
+Use `authenticate_in_desktop_application.py` to generate.
+
+
+
+`login_customer_id`:
+
+The Ads customer ID of Manager Account. 
 
 
 
