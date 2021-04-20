@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright 2020 Google LLC
+# Copyright 2018 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,38 +12,33 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""This example illustrates how to get all campaigns.
+"""This example lists the resource names for the customers that the
+authenticating user has access to.
 
-To add campaigns, run add_campaigns.py.
+The customer IDs retrieved from the resource names can be used to set
+the login-customer-id configuration. For more information see this
+documentation: https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid
 """
 
 
-import argparse
 import sys
 
 from google.ads.googleads.client import GoogleAdsClient
 from google.ads.googleads.errors import GoogleAdsException
 
 
-def main(client, customer_id):
-    ga_service = client.get_service("GoogleAdsService")
+# [START list_accessible_customers]
+def main(client):
+    customer_service = client.get_service("CustomerService")
 
-    query = """
-        SELECT
-          campaign.id,
-          campaign.name
-        FROM campaign
-        ORDER BY campaign.id"""
+    accessible_customers = customer_service.list_accessible_customers()
+    result_total = len(accessible_customers.resource_names)
+    print(f"Total results: {result_total}")
 
-    # Issues a search request using streaming.
-    response = ga_service.search_stream(customer_id=customer_id, query=query)
-
-    for batch in response:
-        for row in batch.results:
-            print(
-                f"Campaign with ID {row.campaign.id} and name "
-                f'"{row.campaign.name}" was found.'
-            )
+    resource_names = accessible_customers.resource_names
+    for resource_name in resource_names:
+        print(f'Customer resource name: "{resource_name}"')
+    # [END list_accessible_customers]
 
 
 if __name__ == "__main__":
@@ -53,21 +48,8 @@ if __name__ == "__main__":
     path = os.path.join(os.path.dirname(__file__), 'google-ads.yaml')
     googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
 
-    parser = argparse.ArgumentParser(
-        description="Lists all campaigns for specified customer."
-    )
-    # The following argument(s) should be provided to run the example.
-    parser.add_argument(
-        "-c",
-        "--customer_id",
-        type=str,
-        required=True,
-        help="The Google Ads customer ID.",
-    )
-    args = parser.parse_args()
-
     try:
-        main(googleads_client, args.customer_id)
+        main(googleads_client)
     except GoogleAdsException as ex:
         print(
             f'Request with ID "{ex.request_id}" failed with status '
