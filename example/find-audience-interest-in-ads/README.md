@@ -12,7 +12,8 @@ Info ==> https://developers.google.com/google-ads/api/docs/first-call/overview#c
 
 `developer_token`:
 
-Grants access to the Ads API, not to a particular Ads account. **<u>ONLY Manager Account</u> have developer token**.
+Grants access to the Ads API, not to a particular Ads account. Once the developer token is approved, the same token for requests can be used against all our Google Ads accounts, even if they're not linked to the manager account associated with the developer token.
+**<u>ONLY Manager Account</u> have developer token**.
 
 Can retrieve the developer token by signing in to your manager account then navigating to the **API Center (TOOLS & SETTINGS > SETUP > API Center)**.
 
