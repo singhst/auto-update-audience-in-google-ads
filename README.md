@@ -29,9 +29,19 @@ Update audience in Ad,
 1. Get audience’s interests report from Google Analytics Report API.
 2. Take top-3 interests from each category in `GA Audience --> Interest` report.
 3. Find and enable relevant audiences (i.e. interests) in Ads. Pause the irrelevant audiences.
-4. Check the status of the Ad group. Enable it if it is pasued, otherwisw no action to Ad group.
+4. Check the status of the Ad group. Enable it if it is paused, otherwise no action to Ad group.
 
-## Configuration on Google Cloud Function
+# Results
+
+[local run result, can get GA and can find audience in Ads]
+
+AND
+
+[gcp logging - Show it can get GA and set in Ads]
+
+[GCP Logging shows weekly ran]
+
+## Configurations
 
 Import the `in-cloud-function` folder into Cloud Function.
 
