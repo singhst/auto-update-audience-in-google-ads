@@ -4,7 +4,7 @@
 
 Automating to update the audience in Google Ads. The audiences are updated based on Google Analytics (GA, Universal Analytics) report. 
 
-`Benefit of this strategy`: `Lift the performance of advertising` in Google Ads. Have a higher `(1) number of clicks` and `(2) conversion rate` in the display ads.
+`Benefit of this strategy`: Lift the `performance of advertising` in Google Ads. Increase `(1) number of clicks` and `(2) conversion rate` in the display ads.
 
 
 ## System Overview
@@ -31,6 +31,7 @@ Update audience in Ad,
 3. Find and enable relevant audiences (i.e. interests) in Ads. Pause the irrelevant audiences.
 4. Check the status of the Ad group. Enable it if it is paused, otherwise no action to Ad group.
 
+
 # Results
 
 [local run result, can get GA and can find audience in Ads]
@@ -41,9 +42,11 @@ AND
 
 [GCP Logging shows weekly ran]
 
+
 ## Configurations
 
 [?? Import the `in-cloud-function` folder into Cloud Function.]
+
 
 ### Install the client library
 `python3 -m virtualenv venv` 
@@ -62,6 +65,7 @@ AND
 ## Contributing
 
 [xxx]
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
