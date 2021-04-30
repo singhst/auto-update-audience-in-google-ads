@@ -43,7 +43,7 @@ AND
 
 ## Configurations
 
-Import the `in-cloud-function` folder into Cloud Function.
+[?? Import the `in-cloud-function` folder into Cloud Function.]
 
 ### Install the client library
 `python3 -m virtualenv venv` 
@@ -53,6 +53,11 @@ Import the `in-cloud-function` folder into Cloud Function.
 `pip install --upgrade google-api-python-client` 
 
 `pip install --upgrade oauth2client`
+
+
+## Folder structure
+[xxx]
+
 
 ## Contributing
 
