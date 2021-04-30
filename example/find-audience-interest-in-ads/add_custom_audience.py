@@ -103,7 +103,9 @@ if __name__ == "__main__":
     # home directory if none is specified.
     # path = "google-ads.yaml"  
     import os
-    path = os.path.join(os.path.dirname(__file__), 'google-ads.yaml')
+    current_file = os.path.abspath(os.path.dirname(__file__))
+    parent_of_parent_dir = os.path.join(current_file, '../../')
+    path = os.path.join(parent_of_parent_dir, 'google-ads.yaml')
     googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
 
     parser = argparse.ArgumentParser(
