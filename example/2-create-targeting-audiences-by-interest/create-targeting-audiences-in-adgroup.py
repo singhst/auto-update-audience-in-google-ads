@@ -1,3 +1,11 @@
+"""This example create "CustomAffinityInfo" and "CustomIntentInfo" targeting Audiences in ad group.
+
+see https://developers.google.com/google-ads/api/docs/targeting/criteria
+
+AdGroupCriterionService,
+https://developers.google.com/google-ads/api/reference/rpc/v7/AdGroupCriterionService#mutateadgroupcriteria
+"""
+
 #!/usr/bin/env python
 # Copyright 2018 Google LLC
 #
@@ -12,54 +20,41 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""This example illustrates how to get campaign criteria, or negative keywords.
-"""
 
 
 import argparse
 import sys
+import uuid
 
 from google.ads.googleads.client import GoogleAdsClient
 from google.ads.googleads.errors import GoogleAdsException
 
 
 def main(client, customer_id, campaign_id):
-    ga_service = client.get_service("GoogleAdsService")
+    ad_group_service = client.get_service("AdGroupCriterionService")
+    campaign_service = client.get_service("CampaignService")
 
-    query = f"""
-        SELECT
-          campaign.id,
-          campaign_criterion.campaign,
-          campaign_criterion.criterion_id,
-          campaign_criterion.negative,
-          campaign_criterion.type,
-          campaign_criterion.keyword.text,
-          campaign_criterion.keyword.match_type
-        FROM campaign_criterion
-        WHERE campaign.id = {campaign_id}"""
+    ad_group_criterion = client.get_type("GetAdGroupCriterionRequest")
+    ad_group_criterion.resource_name = "Interest In Market Segment"
 
-    search_request = client.get_type("SearchGoogleAdsStreamRequest")
-    search_request.customer_id = customer_id
-    search_request.query = query
+    ad_group_response = ad_group_service.GetAdGroupCriterion(ad_group_criterion)
+    print(ad_group_response)
+    # # Create ad group.
+    # ad_group_operation = client.get_type("AdGroupOperation")
+    # ad_group = ad_group_operation.create
+    # ad_group.name = f"Earth to Mars cruises {uuid.uuid4()}"
+    # ad_group.status = client.get_type("AdGroupStatusEnum").AdGroupStatus.ENABLED
+    # ad_group.campaign = campaign_service.campaign_path(customer_id, campaign_id)
+    # ad_group.type_ = client.get_type(
+    #     "AdGroupTypeEnum"
+    # ).AdGroupType.SEARCH_STANDARD
+    # ad_group.cpc_bid_micros = 10000000
 
-    response = ga_service.search_stream(request=search_request)
-
-    for batch in response:
-        for row in batch.results:
-            criterion = row.campaign_criterion
-            print(
-                f'Campaign criterion with ID "{criterion.criterion_id}" '
-                "was retrieved:"
-            )
-
-            if criterion.type_.name == "KEYWORD":
-                print(
-                    f'\t{" " if criterion.negative else "Negative "} '
-                    f'Keyword with text "{criterion.keyword.text}" and '
-                    f"match type {criterion.keyword.match_type}."
-                )
-            else:
-                print(f"Not a keyword: {criterion.type_.name}")
+    # # Add the ad group.
+    # ad_group_response = ad_group_service.mutate_ad_groups(
+    #     customer_id=customer_id, operations=[ad_group_operation]
+    # )
+    # print(f"Created ad group {ad_group_response.results[0].resource_name}.")
 
 
 if __name__ == "__main__":
@@ -72,10 +67,7 @@ if __name__ == "__main__":
     googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
 
     parser = argparse.ArgumentParser(
-        description=(
-            "List campaign criteria, or negative keywords, for a "
-            "given campaign."
-        )
+        description="Adds an ad group for specified customer and campaign id."
     )
     # The following argument(s) should be provided to run the example.
     parser.add_argument(
