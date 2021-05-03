@@ -55,7 +55,12 @@ def main(client, customer_id, page_size, campaign_id=None):
 if __name__ == "__main__":
     # GoogleAdsClient will read the google-ads.yaml configuration file in the
     # home directory if none is specified.
-    googleads_client = GoogleAdsClient.load_from_storage(version="v6")
+    import os
+    current_file = os.path.abspath(os.path.dirname(__file__))
+    parent_of_parent_dir = os.path.join(current_file, '../../')
+    path = os.path.join(parent_of_parent_dir, 'google-ads.yaml')
+    googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
+
 
     parser = argparse.ArgumentParser(
         description="List ad groups for specified customer."

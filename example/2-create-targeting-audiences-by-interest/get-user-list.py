@@ -31,30 +31,13 @@ from google.ads.googleads.errors import GoogleAdsException
 
 
 def main(client, customer_id, campaign_id):
-    ad_group_service = client.get_service("AdGroupCriterionService")
+    user_list_service = client.get_service("UserListService")
     # campaign_service = client.get_service("CampaignService")
+    print("1", user_list_service.__dict__)
 
-    ad_group_criterion = client.get_type("GetAdGroupCriterionRequest")
-    ad_group_criterion.resource_name = "Ad group 1"
-
-    ad_group_response = ad_group_service.GetAdGroupCriterion(ad_group_criterion)
-    print(ad_group_response)
-    # # Create ad group.
-    # ad_group_operation = client.get_type("AdGroupOperation")
-    # ad_group = ad_group_operation.create
-    # ad_group.name = f"Earth to Mars cruises {uuid.uuid4()}"
-    # ad_group.status = client.get_type("AdGroupStatusEnum").AdGroupStatus.ENABLED
-    # ad_group.campaign = campaign_service.campaign_path(customer_id, campaign_id)
-    # ad_group.type_ = client.get_type(
-    #     "AdGroupTypeEnum"
-    # ).AdGroupType.SEARCH_STANDARD
-    # ad_group.cpc_bid_micros = 10000000
-
-    # # Add the ad group.
-    # ad_group_response = ad_group_service.mutate_ad_groups(
-    #     customer_id=customer_id, operations=[ad_group_operation]
-    # )
-    # print(f"Created ad group {ad_group_response.results[0].resource_name}.")
+    user_list_request = client.get_type("UserInterestInfo")
+    print("2", user_list_request)
+    
 
 
 if __name__ == "__main__":
