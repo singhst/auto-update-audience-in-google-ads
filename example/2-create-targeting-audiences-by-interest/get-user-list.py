@@ -35,8 +35,20 @@ def main(client, customer_id, campaign_id):
     # campaign_service = client.get_service("CampaignService")
     print("1", user_list_service.__dict__)
 
-    user_list_request = client.get_type("UserInterestInfo")
-    print("2", user_list_request)
+    # resources = user_list_service.GetUserList()
+    user_list_operation = client.get_type("UserListOperation")
+    user_list = user_list_operation.create
+    user_list.name = (
+        "All visitors to http://example.com/example1 AND "
+        f"http://example.com/example2"
+    )
+    user_list.description = (
+        "Visitors of both http://example.com/example1 AND "
+        "http://example.com/example2"
+    )
+    print("2", user_list_operation, type(user_list_operation))
+    print("3", user_list, type(user_list))
+
     
 
 
