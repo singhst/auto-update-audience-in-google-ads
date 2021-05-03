@@ -62,6 +62,11 @@ AND
 [xxx]
 
 
+## Remarks
+Google examples,
+https://github.com/googleads/google-ads-python
+
+
 ## Contributing
 
 [xxx]

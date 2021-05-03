@@ -32,10 +32,10 @@ from google.ads.googleads.errors import GoogleAdsException
 
 def main(client, customer_id, campaign_id):
     ad_group_service = client.get_service("AdGroupCriterionService")
-    campaign_service = client.get_service("CampaignService")
+    # campaign_service = client.get_service("CampaignService")
 
     ad_group_criterion = client.get_type("GetAdGroupCriterionRequest")
-    ad_group_criterion.resource_name = "Interest In Market Segment"
+    ad_group_criterion.resource_name = "Ad group 1"
 
     ad_group_response = ad_group_service.GetAdGroupCriterion(ad_group_criterion)
     print(ad_group_response)
