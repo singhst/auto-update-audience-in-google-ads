@@ -1,11 +1,3 @@
-"""This example create "CustomAffinityInfo" and "CustomIntentInfo" targeting Audiences in ad group.
-
-see https://developers.google.com/google-ads/api/docs/targeting/criteria
-
-AdGroupCriterionService,
-https://developers.google.com/google-ads/api/reference/rpc/v7/AdGroupCriterionService#mutateadgroupcriteria
-"""
-
 #!/usr/bin/env python
 # Copyright 2018 Google LLC
 #
@@ -20,41 +12,45 @@ https://developers.google.com/google-ads/api/reference/rpc/v7/AdGroupCriterionSe
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+"""This example illustrates how to retrieve ad groups."""
 
 
 import argparse
 import sys
-import uuid
-
 from google.ads.googleads.client import GoogleAdsClient
 from google.ads.googleads.errors import GoogleAdsException
 
 
-def main(client, customer_id, campaign_id):
-    ad_group_service = client.get_service("AdGroupCriterionService")
-    # campaign_service = client.get_service("CampaignService")
+_DEFAULT_PAGE_SIZE = 1000
 
-    ad_group_criterion = client.get_type("GetAdGroupCriterionRequest")
-    ad_group_criterion.resource_name = "Ad group 1"
 
-    ad_group_response = ad_group_service.GetAdGroupCriterion(ad_group_criterion)
-    print(ad_group_response)
-    # # Create ad group.
-    # ad_group_operation = client.get_type("AdGroupOperation")
-    # ad_group = ad_group_operation.create
-    # ad_group.name = f"Earth to Mars cruises {uuid.uuid4()}"
-    # ad_group.status = client.get_type("AdGroupStatusEnum").AdGroupStatus.ENABLED
-    # ad_group.campaign = campaign_service.campaign_path(customer_id, campaign_id)
-    # ad_group.type_ = client.get_type(
-    #     "AdGroupTypeEnum"
-    # ).AdGroupType.SEARCH_STANDARD
-    # ad_group.cpc_bid_micros = 10000000
+def main(client, customer_id, page_size, campaign_id=None):
+    ga_service = client.get_service("GoogleAdsService")
 
-    # # Add the ad group.
-    # ad_group_response = ad_group_service.mutate_ad_groups(
-    #     customer_id=customer_id, operations=[ad_group_operation]
-    # )
-    # print(f"Created ad group {ad_group_response.results[0].resource_name}.")
+    query = """
+        SELECT
+          campaign.id,
+          ad_group.id,
+          ad_group.name
+        FROM ad_group"""
+
+    if campaign_id:
+        query += f" WHERE campaign.id = {campaign_id}"
+
+    search_request = client.get_type("SearchGoogleAdsRequest")
+    search_request.customer_id = customer_id
+    search_request.query = query
+    search_request.page_size = _DEFAULT_PAGE_SIZE
+
+    results = ga_service.search(request=search_request)
+
+    for row in results:
+        print(f"> raw returned data:\n", row.__dict__)
+        print(
+            f"Ad group with ID {row.ad_group.id} and name "
+            f'"{row.ad_group.name}" was found in campaign with '
+            f"ID {row.campaign.id}."
+        )
 
 
 if __name__ == "__main__":
@@ -65,9 +61,13 @@ if __name__ == "__main__":
     parent_of_parent_dir = os.path.join(current_file, '../../')
     path = os.path.join(parent_of_parent_dir, 'google-ads.yaml')
     googleads_client = GoogleAdsClient.load_from_storage(path, version="v6")
+<<<<<<< HEAD:example/2-create-targeting-audiences-by-interest/(from_example)get_ad_groups.py
+=======
+
+>>>>>>> c223e117d80803589bbf688f491ca089e01cf469:example/2-create-targeting-audiences-by-interest/(from example)get_ad_groups.py
 
     parser = argparse.ArgumentParser(
-        description="Adds an ad group for specified customer and campaign id."
+        description="List ad groups for specified customer."
     )
     # The following argument(s) should be provided to run the example.
     parser.add_argument(
@@ -78,12 +78,24 @@ if __name__ == "__main__":
         help="The Google Ads customer ID.",
     )
     parser.add_argument(
-        "-i", "--campaign_id", type=str, required=True, help="The campaign ID."
+        "-i",
+        "--campaign_id",
+        type=str,
+        required=False,
+        help=(
+            "The campaign ID. Specify this to list ad groups "
+            "solely for this campaign ID."
+        ),
     )
     args = parser.parse_args()
 
     try:
-        main(googleads_client, args.customer_id, args.campaign_id)
+        main(
+        googleads_client,
+        args.customer_id,
+        _DEFAULT_PAGE_SIZE,
+        campaign_id=args.campaign_id,
+    )
     except GoogleAdsException as ex:
         print(
             f'Request with ID "{ex.request_id}" failed with status '
