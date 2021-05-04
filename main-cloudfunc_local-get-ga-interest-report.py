@@ -242,3 +242,22 @@ if __name__ == '__main__':
     analytics = get_ga_service_cloudfunc()
     top3Interests = main(analytics)
     print(top3Interests)
+
+
+"""
+Result:
+
+$> python main-cloudfunc_local-get-ga-interest-report.py
+
+hi
+=== Locally =========================
+['Games/Computer & Video Games/Browser Games', '[Life Events] Moving/Moving Soon', 
+'Games/Computer & Video Games/Casual Games', 'Food & Dining/Cooking Enthusiasts/30 Minute Chefs', 
+'Lifestyles & Hobbies/Family-Focused', 'Lifestyles & Hobbies/Pet Lovers']
+=== From Cloud Storage =========================
+credentials = <oauth2client.service_account.ServiceAccountCredentials object at 0x000001EF4EC72A30>
+['Games/Computer & Video Games/Browser Games', '[Life Events] Moving/Moving Soon', 
+'Games/Computer & Video Games/Casual Games', 'Food & Dining/Cooking Enthusiasts/30 Minute Chefs', 
+'Lifestyles & Hobbies/Family-Focused', 'Lifestyles & Hobbies/Pet Lovers']
+
+"""
